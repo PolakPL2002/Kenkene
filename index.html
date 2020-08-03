@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kenkene</title>
+    <script src="jQuery.js"></script>
+    <script src="script.js?v=1"></script>
+    <link rel="stylesheet" href="style.css?v=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+<div id="loading_overlayer">Ładowanie...</div>
+<div id="containers">
+    <div id="game_selector_container" class="container">
+        <div class="game_selector_text">Wybierz grę</div>
+        <div class="game_selector_games">
+        </div>
+    </div>
+    <div id="login_container" class="container">
+        <div class="login_game"></div>
+        <div class="login_text">Podaj swoją nazwę</div>
+        <div class="login_input"><label for="login_input"></label><input id="login_input" type="text" minlength="3"
+                                                                         maxlength="64"></div>
+        <div class="login_button">Gotowe</div>
+    </div>
+    <div id="dashboard_container" class="container">
+        <div class="me">
+            <div class="me_name"></div>
+            <div class="me_balance"></div>
+        </div>
+        <div class="competitors">
+        </div>
+        <div class="buttons">
+            <div style="background-color: #ffe0cc" class="button" id="pay">Zapłać</div>
+            <div style="background-color: #ccffcf" class="button" id="get">Pobierz z banku</div>
+            <div style="background-color: #ffcccc" class="button" id="incomeTax">Podatek dochodowy</div>
+            <div style="background-color: #fffacc" class="button" id="luxuryTax">Podatek luksusowy</div>
+            <div style="background-color: #ccd7ff" class="button" id="start">Przechodzę przez start</div>
+            <div style="background-color: #ffffff" class="button" id="history">Historia (moja)</div>
+            <div style="background-color: #ffffff" class="button" id="history_global">Historia (wszystkich)</div>
+        </div>
+    </div>
+    <div id="pay_container" class="container">
+        <div class="button" id="pay_back">Wróć</div>
+        <div style="text-align:center;">Wybierz odbiorcę</div>
+        <div class="recipients">
+            <div class="recipient selected" id="recipientbank">&lt;Bank&gt;</div>
+        </div>
+        <div style="text-align:center;">Wybierz opis</div>
+        <div style="display:flex; flex-wrap: wrap; margin: 0 5px;">
+            <div class="description" id="description0">Zakup posesji</div>
+            <div class="description" id="description1">Spłata zastawu</div>
+            <div class="description selected" id="description2">Inne</div>
+        </div>
+        <div style="text-align:center;">Podaj wartość</div>
+        <input id="pay_amount" class="amount" type="number" placeholder="Wartość (w k)">
+        <div class="button" id="pay_execute">Wykonaj</div>
+    </div>
+    <div id="get_container" class="container">
+        <div class="button" id="get_back">Wróć</div>
+        <div style="text-align:center;">Wybierz opis</div>
+        <div style="display:flex; flex-wrap: wrap">
+            <div class="get_description" id="get_description0">Zastawienie posesji</div>
+            <div class="get_description selected" id="get_description1">Inne</div>
+        </div>
+        <div style="text-align:center;">Podaj wartość</div>
+        <input id="get_amount" class="amount" type="number" placeholder="Wartość (w k)">
+        <div class="button" id="get_execute">Wykonaj</div>
+    </div>
+    <div id="history_container" class="container">
+        <div class="button" id="history_back">Wróć</div>
+        <div class="history_list">
+            <div class="history_entry"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
